@@ -1,0 +1,72 @@
+#from graphics import Canvas
+from random import randint
+
+CANVAS_WIDTH = 400
+CANVAS_HEIGHT = 400
+ELEMENTS = ("PAPER", "SCISSORS", "ROCK", "LIZARD", "SPOCK")
+
+
+def main():
+    #canvas = Canvas(CANVAS_WIDTH, CANVAS_HEIGHT)
+    # TODO: your code here!
+    player_score = 0
+    players_list = []
+    computer_choice = 0
+    player_choice = 0
+    player_name = str(input("What's your name?: ")).strip()
+    game_on = True
+    while game_on:
+        print(f'{player_name} has {player_score} wins')
+        computer_choice = randint(0,5)
+        player_choice = int(input('Choice: '))
+        game_on = game_resolution(player_score, player_choice, computer_choice)
+        #print(ELEMENTS[computer_choice])
+    
+def game_resolution(player_score, p1, cpu):
+    if cpu == p1:
+        print('DRAW')
+        return True
+    else:
+        if cpu == 0: #paper
+            if (p1 == 2) or (p1== 4):
+                print('lose')
+                return False
+            else:
+                print('win')
+                player_score = player_score + 1
+                return True
+        elif cpu == 1: #scissors
+            if (p1 == 0) or (p1 == 3):
+                print('lose')
+                return False
+            else:
+                print('win')
+                player_score += 1
+                return True
+        elif cpu == 2: #rock
+            if (p1 == 1) or (p1 == 3):
+                print ('lose')
+                return False
+            else:
+                print ('win')
+                player_score += 1
+                return True
+        elif cpu == 3: #Lizard
+            if (p1 == 0) or (p1 == 4):
+                print ('lose')
+                return False
+            else:
+                print ('win')
+                player_score += 1
+                return True
+        elif cpu == 4: #Spock
+            if (p1 == 1) or (p1 == 2):
+                print('lose')
+                return False
+            else:
+                print ('win')
+                player_score += 1
+                return True
+
+if __name__ == '__main__':
+    main()
