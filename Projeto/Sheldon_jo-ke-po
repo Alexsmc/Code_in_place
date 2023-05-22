@@ -17,6 +17,7 @@ def main():
     game_on = True
     while game_on:
         print(f'{player_name} has {player_score} wins')
+        menu()
         computer_choice = randint(0,5)
         player_choice = int(input('Choice: '))
         game_on = game_resolution(player_score, player_choice, computer_choice)
@@ -68,5 +69,12 @@ def game_resolution(player_score, p1, cpu):
                 player_score += 1
                 return True
 
+def menu():
+    print: ('''CHOOSE YOUR WEPON
+    [0] PAPER
+    [1] SCISSORS
+    [2] ROCK
+    [3] LIZARD
+    [4] SPOCK''')
 if __name__ == '__main__':
     main()
