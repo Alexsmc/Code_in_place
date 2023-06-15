@@ -1,5 +1,6 @@
 Final Project from CODE in PLace Stanford 2023.
 Link to play the game: -> https://codeinplace.stanford.edu/cip3/share/6fr4oplCk4ZCdZeliVXR
+
 Description:
 
 "Rock Paper Scissors Spock Lizard" is a simple game implemented in Python. 
@@ -8,18 +9,29 @@ Spock and Lizard.
 
 The game allows players to compete against the computer in a series of rounds and keeps track of their scores.
 The rules of the game are as follows:
+
 Rock crushes Scissors
+
 Scissors cuts Paper
+
 Paper covers Rock
+
 Rock crushes Lizard
+
 Lizard poisons Spock
+
 Spock smashes Scissors
+
 Scissors decapitates Lizard
+
 Lizard eats Paper 
+
 Paper disproves Spock 
+
 Spock vaporizes Rock 
 
-Players can make their choice by typing "rock", "paper", "scissors", "spock", or "lizard" in the console. 
+
+Players can make their choice by typing "rock", "paper", "scissors", "spock", or "lizard" in the console.
 The computer will randomly select its choice, and the outcome of each round will be determined based on the rules mentioned above. 
 The game continues until a specified number of rounds are played.  
 Additionally, this game keeps track of the top 10 players' scores and presents a ranking at the end. 
