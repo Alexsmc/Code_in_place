@@ -99,7 +99,7 @@ def main():
             player_list.pop()
 
         '''ADDING to the file (unfortunately it doesn't save in the site,
-           but you can try in your computer.'''
+           but you can try in your computer. It works!'''
         with open('ranking.txt', 'w') as file:
             json.dump(player_list, file)
 
